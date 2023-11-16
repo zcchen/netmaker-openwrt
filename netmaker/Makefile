@@ -8,18 +8,21 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=netmaker
-PKG_VERSION:=0.9.4
+PKG_VERSION:=0.21.1
 PKG_RELEASE:=1
 
-PKG_SOURCE_PROTO:=git
-PKG_SOURCE_URL:=https://github.com/gravitl/netmaker.git
-PKG_SOURCE_VERSION:=e9bce264719f88c30e252ecc754d08f422f4c080
-PKG_SOURCE_DATE:=20220117
-PKG_MIRROR_HASH:=skip
+#PKG_SOURCE_PROTO:=git
+#PKG_SOURCE_URL:=https://github.com/gravitl/netmaker.git
+#PKG_SOURCE_VERSION:=e9bce264719f88c30e252ecc754d08f422f4c080
+#PKG_SOURCE_DATE:=20220117
+#PKG_MIRROR_HASH:=skip
+PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
+PKG_SOURCE_URL:=https://codeload.github.com/gravitl/netmaker/tar.gz/v${PKG_VERSION}?
+PKG_HASH:=661377ce65210897225a689e74dc40c32a108b4444080e9fe867dfda90c70613
 
 PKG_LICENSE:=MIT
 PKG_LICENSE_FILES:=LICENSE
-PKG_MAINTAINER:=sbilly <superli_1980@hotmail.com>
+PKG_MAINTAINER:=zcchen <Bill.Chen.fs.cn@outlook.com>
 
 PKG_BUILD_DEPENDS:=golang/host
 PKG_BUILD_PARALLEL:=1
